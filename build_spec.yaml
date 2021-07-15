@@ -6,8 +6,10 @@ shell: bash
 env:
   variables:
     "testEnv" : "testValue1"
+    "minor_version" : "24.1"
   exportedVariables:
     - testEnv
+    - minor_version
 #     - minor_version
   vaultVariables:
     "bankPassword": "ocid1.vaultsecret.oc1.iad.amaaaaaa34lgq7aa325l6x7exbl5y7c4pk75aodriekuttjkuqatetll35aq"       # secret-id (in OCI ID format) STORED IN OCI Vault Service
@@ -21,6 +23,5 @@ steps:
     timeoutInSeconds: 400
     command: |
       echo "hello world"
-      echo $bankPassword > abc.txt
       echo $testEnv
 
