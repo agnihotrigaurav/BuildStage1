@@ -23,7 +23,4 @@ steps:
       echo "hello world"
       echo $bankPassword > abc.txt
       echo $testEnv
-outputArtifacts:
-  - name: ABC
-    type: BINARY
-    location: abc.txt
+
